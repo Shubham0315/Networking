@@ -47,3 +47,45 @@ Traceroute and Tracepath
 - It will give insights of how request flows for traceroute
 - If we get no reply in terminal output means its taking time to process
 
+- These commands provides latency issue.
+
+mtr
+-
+- my trace route
+- If we dont want to run ping and tracepath separately, we can run mtr
+- It will ping the website and provides path as well
+- Command :- **mtr youtube.com**
+
+![image](https://github.com/user-attachments/assets/806fcf9d-02e5-4275-9c92-963557c9d013)
+
+
+nslookup
+- 
+- To check if any domain is active and working properly
+- Command :- **nslookup youtube.com**
+- It gives our server and address of website with IP and name address (2 IPs, 2nd is private IP means HTTPS 443 and 1st is of HTTP 80, this is for any website)
+
+![image](https://github.com/user-attachments/assets/78c5bf6d-2ea1-4230-856a-15629768ad62)
+![image](https://github.com/user-attachments/assets/f98d6b63-3afb-4a43-9b19-85069cef6b02)
+
+telnet
+- 
+- Command :- **telnet youtube.com 80**
+- It gives IP of website
+
+![image](https://github.com/user-attachments/assets/65b0d7d2-c0a9-43c3-9bba-8993be7e1074)
+
+hostname 
+- 
+- To get hostname of system
+- We can change hostname by changing contents in file named :- /etc/hosts
+
+iwconfig
+-
+- Shows all wireless connections for the server
+
+![image](https://github.com/user-attachments/assets/46f506f4-d2f0-4d9a-9c16-017d625744a4)
+
+ss
+-
+- Version of netstat
