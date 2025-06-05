@@ -89,3 +89,58 @@ iwconfig
 ss
 -
 - Version of netstat
+- Same as netstat
+
+dig
+-
+- To get info of IP address of any domain, where it is hosted
+- Command :- **dig amazon.com**
+- We are trying to get info of amazon.com from ubuntu server
+
+![image](https://github.com/user-attachments/assets/22d3ab05-4632-462c-a21f-a2a32ebf1df2)
+
+whois
+-
+- To get in depth info about form where the domain name is purchased, where registry is done
+- Command :- whois amazon.com
+
+![image](https://github.com/user-attachments/assets/de4507b2-513b-463a-a978-f6f91d35f10a)
+![image](https://github.com/user-attachments/assets/e30e60ef-6523-45ef-aabe-2c3a7fa6d6f8)
+
+nc
+- netcat
+
+arp
+-
+- To find mac address of anything
+
+ifplugstatus
+-
+- To check whether our interface are working or not
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+curl and wget
+-
+- curl is to call our API endpoints which in turn gives response from server
+- We tell API to get the things to us (response)
+- Command :- **curl -X GET https://dummy.restqapiexample.com/api/v1/employees**
+- -X GET means we want to get data
+
+![image](https://github.com/user-attachments/assets/5a6d174c-46b2-42a0-a4c3-dfdc21045ae1)
+
+- To get data in good UI way, make more good looking, use below
+  - Command :- **curl -X GET https://dummy.restqapiexample.com/api/v1/employees | jq**
+ 
+![image](https://github.com/user-attachments/assets/4c70f621-d5ee-4756-8013-ec94871eb5e6)
+
+- wget is to download things from internet
+- Command :- wget $link
+
+![image](https://github.com/user-attachments/assets/983f3ffe-04a4-4401-bc88-32ff6ba0d16c)
+
+iptables
+-
+- 
+ 
+
