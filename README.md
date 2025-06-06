@@ -141,6 +141,27 @@ curl and wget
 
 iptables
 -
-- 
- 
+- Suppose on our server there is internet access, route table shows IP, routes in table format
+- We can run iptables with root user only (sudo)
+- Command :- **sudo iptables --list-rules**
 
+![image](https://github.com/user-attachments/assets/013cfd7a-092f-4a2f-8e55-97874b413b94)
+
+watch
+-
+- If we've to run command and check its output in specific time interval, watch is used
+- Command :- **watch top** or **watch -n 5 top** (runs every 5 secs)
+
+nmap
+-
+- Network map
+- Gives idea about network route. To scan website
+
+![image](https://github.com/user-attachments/assets/bba7500b-43f9-4baf-a276-2c71fb924fb0)
+![image](https://github.com/user-attachments/assets/9d287641-2e73-4f22-a958-be14acae48a6)
+
+route
+-
+- To edit our route or change them like adding public IP
+
+![image](https://github.com/user-attachments/assets/5d554d3c-2de8-4b55-9761-6a7d9e3953a1)
