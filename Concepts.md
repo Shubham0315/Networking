@@ -114,9 +114,47 @@ DNS, NAT and Firewalls
 - If we've to map our IPV4 address to domain name, we can do using GoDaddy. Now our IP gets mapped with a DNS so that we get our webpage if we browse for the domain only instead of IP
 - We can also get domain from AWS UI - Route53 - Register domain for cheaper price
 
+- Lets say we have VPC under which 2 subnets are there which are public and private. EC2 is in public subnet hosting app which user can access (thus kept in public subnet for user ease). DB of the app lets say RDS which is kept in private subnet. Now for resources in private subnet we need to access from public subnet which is not enabled by default. For this we need to translate IP of both subnets where we use NAT Gateway - Network Address Translation
+- So we'll connect our public subnet device with NAT gateway and it will translate address and connect to DB. Same for DB if it has to access app in public subnet, NAT gateway is to be used
+
+- Now our VPC is in AWS cloud and user is in outside network. Both have different networks. Can user acccess the application directly? ---- NO
+  - Here AWS has VPC which has different network. So we need another gateway for outside world -- Internet Gateway
+  - IGW will connect with our VPC first. There we need route tables to connect with different subnets which takes our request to our application
+ 
+  - User request - Internet Gateway - Route Table - Application(public) - NAT Gateway - DB (Private)
+ 
+![image](https://github.com/user-attachments/assets/591d508c-2644-49bc-a38a-eaf168f97650)
+
+  - The route provides access ti different subnets as per above diagram
+
+- Create VPC - Create subnet - Create IFW - Create route tables and associate subnet with it
+
 ---------------------------------------------------------------------------------------------------
 
-Load Balancers
+- To connect 2 VPCs with each other is called as VPC peering
+
+---------------------------------------------------------------------------------------------------
+
+Load Balancer
 -
-- 
+- It is a gateway which distributes traffic to the application
+- Application LB and Network LB and Gateway LB
+- In EC2, we can create LB
+- ALB is used to redirect HTTP/S traffic, network LB works on VPC level
+
+- LB is a device or software that distributes incoming traffic across multiple servers to ensure no single server is overloaded. It routes client requests to the most appropriate backend server
+- LB is used to have high availability, scalability to distribute traffic evenly, performance and security of apps
+
+- Client request to LB IP - LB decides server to route the request - Request is routed to server - Server processes request and sends response back to client through LB
+
+- Types of LB algorithms :-
+  - Round robin
+  - Least connections - send traffic to server with fewest active connections
+  - IP Hash - uses client IP to decide which server to route the request
+  - Weighted round robin - servers get more traffic based on capacity
+ 
+- Types of LB :-
+  - Application LB :- Layer 7 of OSI. Has content based routing (path/host based). Supports HTTP/S. Ideal for microservices and container-based apps
+  - Network LB :- Transport layer Layer 4. Handles millions of requests/second. Very low latency. Can handle sudden traffic spikes
+  - GateWay LB :- Transport proxy at network layer. Routes traffic to third party virtual appliances like security appliances, firewalls, inspection tools
 
