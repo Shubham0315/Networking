@@ -63,3 +63,51 @@ IP and Subnets
 
 - So our devices are put into one network which has IP address. So which network we are connected, we get mapped with that IP
 - If we disconnect from one network and connect to other, our device gets mapped with new IP
+
+---------------------------------------------------------------------------------------------------
+
+DNS, NAT and Firewalls
+-
+- While creatig EC2, we get tab of Network Settings
+- Go to network settings - Edit
+
+![image](https://github.com/user-attachments/assets/6f29511c-b728-41ec-8147-3340fc3d2609)
+
+- Suppose on internet we have AWS inside which we can create our own network called Virtual Private Cloud (VPC). Also we can have multiple VPCs under one AWS Cloud each with different/isolated networks, IPV4 addresses. Inside the VPC we create our instance which gets IP address. Here devices in 2 VPC can have same IP addresses unlike earlier concepts due to separated/isolated network
+
+![image](https://github.com/user-attachments/assets/054d077d-4717-43ef-86ce-387273d3e701)
+
+- If we've many devices inside our VPC and IP addressed are about to get finished, we can do subnetting.
+- So inside the VPC, create a subnet and put devices into it where allocation of IPs to devices is not possible due to limitation.
+
+- So from above image of EC2, we can say there is VPC which has its ID, under which we've subnets. We can auto assign IP address for the subnet. Create firewall so that our server to get access through SSH only (rules)
+
+- Server is created as AWS Cloud - VPC - Subnet - Server
+
+- If we go to Networking section of EC2, we get all the information
+
+![image](https://github.com/user-attachments/assets/48c31fc8-000d-487e-b339-8ede9853b248)
+
+- Connect to the EC2 using AWS UI, it will try to establish connection using OSI model
+  - First go to browser, open application - Check presentation security - Maintain session between AWS and browser - Used TCP to transfer data - Connected through Network - We can access app using data link and Physical layer
+- After connecting update the system :- **sudo apt-get update**
+- Install nginx for making web page :- **sudo apt-get install nginx**
+- Webpage location :- **cd /var/www/html**
+
+![image](https://github.com/user-attachments/assets/860c6160-12c5-49bc-bb10-83b59b4241e4)
+
+- Create another webpahge there named "index.html" using chatgpt
+
+![image](https://github.com/user-attachments/assets/50ba1b3d-22ed-4f89-b3fd-8d10762047bc)
+
+- To check nginx server status :- systemctl status nginx
+
+![image](https://github.com/user-attachments/assets/51d58af8-f70d-4114-863d-bb65137c59df)
+
+- Take private IP and enter with 80, we cannot access the site. Our firewall is not allowing to connect to server which is SG or NACL
+
+
+
+
+
+
