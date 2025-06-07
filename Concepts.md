@@ -12,3 +12,37 @@
 
 To access site 
 - Access internet using optical cable - Send request to website using browser - to reach IP of website DNS resolves the request
+
+
+traceroute
+-
+- To check the route of request given by user how it flows
+- To reach to netflix.com, first our browser hits request. It goes to our local internet (wifi). Then it goes to ISP address (airtel). Then it goes through multiple IPs/servers and then goes to our website and provides us required data
+
+![image](https://github.com/user-attachments/assets/e65c2e1a-c42c-4344-81b0-bc79c70692f4)
+
+---------------------------------------------------------------------------------------------------
+
+OSI Model
+-
+- Consist of 7 layers
+- Application is run by end user.
+- Application(HTTP/HTTPS) - Presentation(Syntax, Security) - Session(API, Sockets) - Transport(TCP) - Network(Packets) - Data Link(Ethernet) - Physical
+
+- Application - File transfer, mail services
+- Presentation - Data encoding, encryption
+- Session - Synchronization of data
+- Transport - Service point addressing
+- Network - Routing
+- Data link - Physical addressing, access control
+- Physical - Representation of bits, transmission mode
+
+TCP/IP Model
+-
+- Stands for Transmission Control Protocol and its a suite of communication protocols used to interconnect network devices on internet
+- TCP/IP is used as communications protocol in private computer network
+- Keep all layers in OSI as it is
+- Application + Presentation + Session :- Application layer
+- Then transport layer
+- Then network means internet
+- Data Link + Physical :- Network access layer
