@@ -104,10 +104,19 @@ DNS, NAT and Firewalls
 
 ![image](https://github.com/user-attachments/assets/51d58af8-f70d-4114-863d-bb65137c59df)
 
-- Take private IP and enter with 80, we cannot access the site. Our firewall is not allowing to connect to server which is SG or NACL
+- Take private IP and enter with 80, we cannot access the site. Our firewall is not allowing to connect to server which is SG or NACL. Go to EC2 - Security - Security groups - Add rule
+- To send data to internet, we need TCP IP so select Custom TCP, port should be 80, source to be anywhere IPV4 - Save rule and access the site now with port 80
 
+![image](https://github.com/user-attachments/assets/d8e9fa19-9c7f-489b-bff0-d906b12ba876)
+![image](https://github.com/user-attachments/assets/a1173d4d-be42-4981-a355-23d4e08bab7a)
 
+- NAT is Network Address Translation which helps private and public subnets to communicate.
+- If we've to map our IPV4 address to domain name, we can do using GoDaddy. Now our IP gets mapped with a DNS so that we get our webpage if we browse for the domain only instead of IP
+- We can also get domain from AWS UI - Route53 - Register domain for cheaper price
 
+---------------------------------------------------------------------------------------------------
 
-
+Load Balancers
+-
+- 
 
