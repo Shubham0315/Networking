@@ -55,3 +55,5 @@ SSH
 - Used to login remote servers, running commands on remote machines, secure file transfers, forwarding traffic
 
 - Initiate connection from SSH client, then ssh server responds, they negotiate encryption and we get authenticated. Then we get encrypted session
+
+-------------------------------------------------------------------------------------------------------
